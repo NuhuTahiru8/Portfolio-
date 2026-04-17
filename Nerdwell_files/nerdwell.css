@@ -1,0 +1,179 @@
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    from {top: 0px;}
+    to {top: calc(100vh/2);}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: calc(100vh/2);}
+}
+
+@-webkit-keyframes showltr {
+    0% {opacity: 0.00;}
+    10% {opacity: 0.00;}
+    20% {opacity: 0.00;}
+    30% {opacity: 0.00;}
+    40% {opacity: 0.00;}
+    50% {opacity: 0.00;}
+    60% {opacity: 0.00;}
+    70% {opacity: 0.00;}
+    80% {opacity: 0.00;}
+    90% {opacity: 0.8; text-decoration: underline;}
+    100% {opacity: 1.00;}
+}
+
+@keyframes showltr {
+    0% {opacity: 0.00;}
+    10% {opacity: 0.00;}
+    20% {opacity: 0.00;}
+    30% {opacity: 0.00;}
+    40% {opacity: 0.00;}
+    50% {opacity: 0.00;}
+    60% {opacity: 0.00;}
+    70% {opacity: 0.00;}
+    80% {opacity: 0.00;}
+    90% {opacity: 0.8; text-decoration: underline;}
+    100% {opacity: 1.00;}
+}
+
+@-webkit-keyframes flash {
+    0% {opacity: 0.8;}
+    10% {opacity: 0.8;}
+    20% {opacity: 0.00;}
+    30% {opacity: 0.00;}
+    40% {opacity: 0.00;}
+    50% {opacity: 0.00;}
+    60% {opacity: 0.00;}
+    70% {opacity: 0.00;}
+    80% {opacity: 0.00;}
+    90% {opacity: 0.00;}
+    100% {opacity: 0.00;}
+}
+
+@keyframes flash {
+    0% {opacity: 0.8;}
+    10% {opacity: 0.8;}
+    20% {opacity: 0.00;}
+    30% {opacity: 0.00;}
+    40% {opacity: 0.00;}
+    50% {opacity: 0.00;}
+    60% {opacity: 0.00;}
+    70% {opacity: 0.00;}
+    80% {opacity: 0.00;}
+    90% {opacity: 0.00;}
+    100% {opacity: 0.00;}
+}
+
+html {
+
+}
+
+body {
+    background-color: #0C0C0C; /* Updated to match ELXPROLab dark background */
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.table {
+    display: table;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+.table-row {
+    display: table-row;
+    width: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.section {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 15px minmax(calc(100vh - 30px), calc(100vh - 30px)) 15px;
+    grid-template-columns: 15px auto 15px;
+}
+
+.text {
+    display: inline-block;
+    opacity: 0.00;
+    font-size: 88pt;
+    font-family: "Courier New", Courier, monospace;
+    color: #FF7701; /* Updated to ELXPROLab orange accent color */
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: steps(10,end);
+    animation-timing-function: steps(10,end);
+    -webkit-animation-name: showltr;
+    animation-name: showltr;
+    -webkit-animation-duration: 200ms;
+    animation-duration: 200ms;
+}
+
+.blink_text {
+    display: inline-block;
+    opacity: 0.00;
+    font-size: 66pt;
+    color: #FF7701; /* Updated to match text color */
+    text-decoration: underline;
+    -webkit-animation-name: flash;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-timing-function:steps(3, end);
+    -animation-name: flash;
+    -animation-duration: 1s;
+    -animation-iteration-count: infinite;
+    -animation-direction: normal;
+    -animation-fill-mode:forwards;
+    -animation-timing-function:steps(3, end);
+}
+
+
+.header {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.body_left {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.body_middle {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: rgba(31, 31, 31, 0.3); /* Updated to match ELXPROLab secondary dark color */
+    overflow-y: hidden;
+    border-radius: 5px;
+    border: thin solid rgba(255, 119, 1, 0.2); /* Updated border to use orange accent */
+}
+
+.body_right {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.footer {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
